@@ -1,0 +1,491 @@
+:root {
+    --primary-color: #01161e;
+    --secondary-color: #4a4e69;
+    --secondary-color1: #EEEEEE;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(./Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Fredoka;
+    src: url(Fredoka-VariableFont_wdth\,wght.ttf);
+}
+
+@font-face {
+    font-family: protest;
+    src: url(./ProtestRiot-Regular.ttf);
+}
+
+body {
+    background-color: var(--secondary-color1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background-color: var(--secondary-color1);
+    position: sticky;
+    top: 0px;
+    height: 3em;
+    /* background-color: var(--secondary-color1); */
+}
+
+.navbar a:hover {
+    color: red;
+}
+
+.navbar .logo1 {
+    font-size: 12px;
+    color: black;
+}
+
+.navbar .logo2 {
+    color: red;
+}
+
+.navbar .fa {
+    position: absolute;
+    display: flex;
+    right: 5em;
+    top: 0.7em;
+    font-size: 1.5em;
+    display: none;
+}
+
+.logo {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.logo:hover {
+    cursor: default;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-bottom: 2px solid red;
+    border-left: 2px solid red;
+    left: 0;
+    bottom: 0;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-top: 2px solid red;
+    border-right: 2px solid red;
+    right: 0;
+    top: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+    padding: 0em 4.5em;
+    color: var(--secondary-color1);
+
+}
+
+.navbar ul li a {
+    font-family: Fredoka;
+    text-decoration: none;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    background-color: red;
+    width: 100%;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+    transform-origin: bottom right;
+
+}
+
+.navbar ul li a:hover::after {
+    transform: scale(1);
+    transform-origin: bottom right;
+}
+
+.navbar ul {
+    margin-top: 1em;
+    margin-left: 13em;
+    position: absolute;
+}
+
+.navbar h3 {
+    font-family: roboto;
+    position: absolute;
+    padding: 0.7em;
+    color: var(--primary-color);
+}
+
+.navbar h3 span {
+    color: red;
+}
+
+.home {
+    /* background-color: var(--secondary-color1); */
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.image {
+    height: 300px;
+    width: 300px;
+    /* background-color: var(--secondary-color1); */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 2em red, 0 0 3em black, inset 0 0 1em red, 0 0 1em red;
+
+}
+
+.image img {
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    background-position: no-repeat;
+}
+
+.image:hover::before,
+.image:hover::after {
+    animation: animate 0.5s both;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+.text {
+    margin-left: -200px;
+    font-family: Fredoka;
+}
+
+.text h1 {
+    font-family: Fredoka;
+    font-size: 3em;
+    padding-bottom: 10px;
+    font-weight: 500;
+}
+
+.text h2 {
+    font-family: Fredoka;
+    font-size: xx-large;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+.text h4 {
+    font-family: Fredoka;
+    font-size: x-large;
+}
+
+.text h1 span {
+    color: red;
+}
+
+.social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 2px solid red;
+    border-radius: 50%;
+    font-size: 2rem;
+    margin: 2rem 1.5rem 3rem 0rem;
+    text-decoration: none;
+}
+
+.social a:hover {
+    transform: scale(1.1);
+    color: black;
+    background-color: red;
+    box-shadow: 0 0 1rem black;
+}
+
+.home .fa {
+    color: black;
+}
+
+.about-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: var(--secondary-color1); */
+}
+
+.about-head h1 {
+    font-family: protest;
+    font-size: 3em;
+
+}
+
+.about-head h1 span {
+    color: red;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 700px;
+    /* background-color: var(--secondary-color1); */
+}
+
+.about .about-me {
+    margin-top: -300px;
+    margin-left: 100px;
+    margin-right: 70px;
+}
+
+.about .about-me h1 {
+    font-size: 3em;
+}
+
+.about .about-me p {
+    font-size: 1.5em;
+}
+
+.about .about-image {
+    margin-top: -300px;
+    margin-right: 100px;
+}
+
+.image1 img {
+    height: 300px;
+    width: 300px;
+}
+
+.image1 {
+
+    height: 300px;
+    width: 300px;
+    background-color: var(--primary-color);
+    width-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 12px 12px 0em red;
+    overflow: hidden;
+}
+
+.about .about-me {
+    font-family: Fredoka;
+
+}
+
+.about .about-me h1 {
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.about .about-me h1 span {
+    color: red;
+}
+
+.services-head {
+    display: flex;
+    /* background-color: var(--secondary-color1); */
+    font-family: protest;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-head h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+.services-head h2 span {
+    color: red;
+}
+
+.services {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    /* gap: 1rem; */
+}
+
+.services .services-box {
+    width: 25%;
+    background-color: white;
+    /* flex: 1 1 1rem; */
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    /* border: .2rem solid red; */
+    margin: 30px;
+    margin-bottom: 100px;
+    box-shadow: 0 0 1rem red;
+    transition: .5s ease;
+
+}
+
+.services .services-box {
+    /* background-color: white; */
+
+}
+
+
+.services .services-box:hover {
+    border: 1px solid red;
+    transform: scaleX(1.1);
+}
+
+.services .services-box p {
+    margin-bottom: 25px;
+}
+
+
+.services .services-box .btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: ;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem;
+    font-size: 1rem;
+    color: ;
+    letter-spacing: .1rem;
+    font-weight: 600;
+}
+
+.services .services-box .btn:hover {
+    transform: translate(12deg);
+}
+
+.services .services-box a {
+    text-decoration: none;
+    color: black;
+}
+
+.services .services-box a:hover {
+    transform: scale(1.1);
+}
+
+.services .services-box i {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: red;
+}
+
+.contact form {
+    max-width: 100rem;
+    align-items: center;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+}
+
+.contact form .contact-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+.contact-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-head h1 {
+    font-family: protest;
+    font-size: 3rem;
+}
+
+.contact-head h1 span {
+    color: red;
+}
+
+.contact {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.contact form .contact-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: black;
+    background-color: white;
+    border-radius: 0.4rem;
+    margin: 0.2rem 0;
+}
+
+.contact form .contact-box input {
+    width: 100%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact .contact-box input {
+    width: 100%;
+
+}
+
+.contact .btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: ;
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem;
+    font-size: 1rem;
+    color: ;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    margin-left: 300px;
+
+}
+
+.footer {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: azure; */
+    /* border: 2px solid red; */
+}
+
+.footer h4 {
+    font-size: 1.5em;
+    padding: 30px;
+
+}
